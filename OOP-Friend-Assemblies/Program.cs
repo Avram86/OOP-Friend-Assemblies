@@ -1,12 +1,16 @@
-﻿using System;
+﻿using FriendAssemblies.Library;
+using System;
 
-namespace OOP_Friend_Assemblies
+namespace FriendAssemblies.Terminal
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] stringArray = new[] { "123", "456", "abc" };
+            int[] intArray = ArrayHelper.ConvertToIntArray(stringArray);
+
+            Console.WriteLine(string.Join(",", intArray));
         }
     }
 }
